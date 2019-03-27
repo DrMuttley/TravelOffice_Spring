@@ -6,51 +6,97 @@ public class Customer {
     private Address address;
     private Trip trip;
 
+    ///////////////////////////////////////////////////// GETTERS /////////////////////////////////////////////////////
+
+    /**
+     * Method get the name of customer.
+     * @return name of customer.
+     */
     public String getName() {
         return this.name;
     }
 
+    /**
+     * Method get the address of customer.
+     * @return address of customer.
+     */
     public Address getAddress() {
         return address;
     }
 
+    /**
+     * Method get the trip of customer.
+     * @return trip of customer.
+     */
     public Trip getTrip() {
         return this.trip;
     }
 
+    ///////////////////////////////////////////////////// SETTERS /////////////////////////////////////////////////////
+
+    /**
+     * Method set the name of customer.
+     * @param name of customer.
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Method set the address of customer.
+     * @param address of customer.
+     */
     public void setAddress(Address address) {
         this.address = address;
     }
 
+    /**
+     * Method set the trip of customer.
+     * @param trip of customer.
+     */
     public void setTrip(Trip trip) {
         this.trip = trip;
     }
 
+    /////////////////////////////////////////////////// CONSTRUCTOR ///////////////////////////////////////////////////
+
+    /**
+     * Method constructs object Customer.
+     * @param name of customer.
+     * @param address of customer.
+     * @param trip of customer.
+     */
     public Customer(String name, Address address, Trip trip) {
         this.name = name;
         this.address = address;
         this.trip = trip;
     }
 
+    ///////////////////////////////////////////////////// METHODS /////////////////////////////////////////////////////
+
+    /**
+     * Method assign trio to customer.
+     * @param trip to assign.
+     */
     public void assignTrip(Trip trip) {
         this.trip = trip;
     }
 
+
+    /**
+     * Method prepare info about customer.
+     * @return customer data.
+     */
     @Override
     public String toString(){
 
-        String customerData = name;
+        StringBuffer customerData = new StringBuffer();
 
-        if(address != null){
-            customerData += " " + address.toString();
-        }
+        customerData.append(name + " " + address.toString());
+
         if(trip != null){
-            customerData += " " + trip.toString();
+            customerData.append(" " + trip.toString());
         }
-        return customerData;
+        return customerData.toString();
     }
 }

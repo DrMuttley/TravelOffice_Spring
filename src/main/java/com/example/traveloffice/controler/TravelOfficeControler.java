@@ -9,6 +9,11 @@ import org.springframework.web.bind.annotation.*;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
+/*
+    ToTest
+    http://localhost:8080/swagger-ui.html
+ */
+
 
 @RestController
 public class TravelOfficeControler {
@@ -33,7 +38,7 @@ public class TravelOfficeControler {
         travelOfficeService.addTrip(description, trip);
     }
 
-    //http://localhost:8080/addCustomer?name=Yolo&trip.price=500
+
 
 
     @PostMapping("/string")
