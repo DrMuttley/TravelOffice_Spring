@@ -2,10 +2,10 @@ package com.example.traveloffice.model;
 
 public abstract class Trip {
 
-    private LocalDate start;
-    private LocalDate end;
-    private String destination;
-    private int price;
+    protected LocalDate start;
+    protected LocalDate end;
+    protected String destination;
+    protected int price;
 
     ///////////////////////////////////////////////////// GETTERS /////////////////////////////////////////////////////
 
@@ -77,19 +77,19 @@ public abstract class Trip {
 
     /////////////////////////////////////////////////// CONSTRUCTOR ///////////////////////////////////////////////////
 
-    /**
-     * Method constructs object trip.
-     * @param start date of trip.
-     * @param end date of trip.
-     * @param destination of trip.
-     * @param price of trip.
-     */
-    public Trip(LocalDate start, LocalDate end, String destination, int price) {
-        this.start = start;
-        this.end = end;
-        this.destination = destination;
-        this.price = price;
-    }
+//    /**
+//     * Method constructs object trip.
+//     * @param start date of trip.
+//     * @param end date of trip.
+//     * @param destination of trip.
+//     * @param price of trip.
+//     */
+//    public Trip(LocalDate start, LocalDate end, String destination, int price) {
+//        this.start = start;
+//        this.end = end;
+//        this.destination = destination;
+//        this.price = price;
+//    }
 
     ///////////////////////////////////////////////////// METHODS /////////////////////////////////////////////////////
 

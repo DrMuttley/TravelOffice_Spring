@@ -60,17 +60,17 @@ public class LocalDate {
 
     /////////////////////////////////////////////////// CONSTRUCTOR ///////////////////////////////////////////////////
 
-    /**
-     * Method constructs object LocalDate.
-     * @param year of date.
-     * @param month of date.
-     * @param day of date
-     */
-    public LocalDate(int year, int month, int day){
-        this.year = year;
-        this.month = month;
-        this.day = day;
-    }
+//    /**
+//     * Method constructs object LocalDate.
+//     * @param year of date.
+//     * @param month of date.
+//     * @param day of date
+//     */
+//    public LocalDate(int year, int month, int day){
+//        this.year = year;
+//        this.month = month;
+//        this.day = day;
+//    }
 
 
     ///////////////////////////////////////////////////// METHODS /////////////////////////////////////////////////////
@@ -87,22 +87,22 @@ public class LocalDate {
         return returnDate;
     }
 
-    /**
-     * Method build LocalDate object from string.
-     * @param stringDate of date.
-     * @return object LocalDate.
-     */
-    public static LocalDate of(String stringDate){
-
-        if(stringDate.length() == 10) {
-
-            int year = Integer.parseInt(stringDate.substring(0, 4));
-            int month = Integer.parseInt(stringDate.substring(5, 7));
-            int day = Integer.parseInt(stringDate.substring(8, 10));
-
-            return new LocalDate(year, month, day);
-        }else{
-            return null;
-        }
-    }
+//    /**
+//     * Method build LocalDate object from string.
+//     * @param stringDate of date.
+//     * @return object LocalDate.
+//     */
+//    public static LocalDate of(String stringDate){
+//
+//        if(stringDate.length() == 10) {
+//
+//            int year = Integer.parseInt(stringDate.substring(0, 4));
+//            int month = Integer.parseInt(stringDate.substring(5, 7));
+//            int day = Integer.parseInt(stringDate.substring(8, 10));
+//
+//            return new LocalDate(year, month, day);
+//        }else{
+//            return null;
+//        }
+//    }
 }

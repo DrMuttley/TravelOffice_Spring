@@ -60,17 +60,17 @@ public class Customer {
 
     /////////////////////////////////////////////////// CONSTRUCTOR ///////////////////////////////////////////////////
 
-    /**
-     * Method constructs object Customer.
-     * @param name of customer.
-     * @param address of customer.
-     * @param trip of customer.
-     */
-    public Customer(String name, Address address, Trip trip) {
-        this.name = name;
-        this.address = address;
-        this.trip = trip;
-    }
+//    /**
+//     * Method constructs object Customer.
+//     * @param name of customer.
+//     * @param address of customer.
+//     * @param trip of customer.
+//     */
+//    public Customer(String name, Address address, Trip trip) {
+//        this.name = name;
+//        this.address = address;
+//        this.trip = trip;
+//    }
 
     ///////////////////////////////////////////////////// METHODS /////////////////////////////////////////////////////
 

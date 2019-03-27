@@ -10,18 +10,18 @@ public class DomesticTrip extends Trip {
      * Method calculated the price of trip with discount.
      * @return price of trip after discount.
      */
-    @Override
+    //@Override
     public int getPrice(){
-        return super.getPrice() - this.ownArrivalDiscount;
+        return super.price - this.ownArrivalDiscount;
     }
-
-    /**
-     * Method get the discount of trip.
-     * @return discount of trip.
-     */
-    public int getOwnArrivalDiscount() {
-        return ownArrivalDiscount;
-    }
+//
+//    /**
+//     * Method get the discount of trip.
+//     * @return discount of trip.
+//     */
+//    public int getOwnArrivalDiscount() {
+//        return ownArrivalDiscount;
+//    }
 
     ///////////////////////////////////////////////////// SETTERS /////////////////////////////////////////////////////
 
@@ -34,15 +34,15 @@ public class DomesticTrip extends Trip {
     }
 
     /////////////////////////////////////////////////// CONSTRUCTORS ///////////////////////////////////////////////////
-
-    /**
-     * Method constructs object DomesticTrip.
-     * @param start date of abroad trip.
-     * @param end date of abroad trip.
-     * @param destination of abroad trip.
-     * @param price of abroad trip.
-     */
-    public DomesticTrip(LocalDate start, LocalDate end, String destination, int price) {
-        super(start, end, destination, price);
-    }
+//
+//    /**
+//     * Method constructs object DomesticTrip.
+//     * @param start date of abroad trip.
+//     * @param end date of abroad trip.
+//     * @param destination of abroad trip.
+//     * @param price of abroad trip.
+//     */
+//    public DomesticTrip(LocalDate start, LocalDate end, String destination, int price) {
+//        super(start, end, destination, price);
+//    }
 }

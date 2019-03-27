@@ -91,7 +91,17 @@ public class TravelOffice {
      */
     public void removeCustomer(Customer customer) throws NoSuchCustomerException{
 
-        if(!customersSet.remove(customer)){
+        getCustomersSet().remove(customer);
+
+        boolean flag = false;
+
+        for(Customer c : customersSet){
+            if(c.equals(customer)){
+                customersSet.remove(c);
+                flag = true;
+            }
+        }
+        if(!flag){
             throw new NoSuchCustomerException("The customer not found exception.");
         }
     }
@@ -188,12 +198,18 @@ public class TravelOffice {
 
     /**
      * Method assign trip to customer.
-     * @param customerName to assign.
+     * @param customer to assign.
      * @param tripDescription to assign.
      * @throws NoSuchCustomerException when customer wasn't found.
      */
-    public void assignTrip(String customerName, String tripDescription) throws NoSuchCustomerException{
-        findCustomerByName(customerName).assignTrip(findTripByDescription(tripDescription));
+    public boolean assignTrip(Customer customer, String tripDescription) throws NoSuchCustomerException{
+
+       getCustomersSet().stream().forEach(c -> {
+           if(c.equals(customer)){
+               c.setTrip(getTripsMap().get(tripDescription));
+           }
+       });
+       return false;
     }
 
 }

@@ -1,8 +1,6 @@
 package com.example.traveloffice.service.imp;
 
-import com.example.traveloffice.model.AbroadTrip;
-import com.example.traveloffice.model.Customer;
-import com.example.traveloffice.model.Trip;
+import com.example.traveloffice.model.*;
 import com.example.traveloffice.service.TravelOfficeService;
 import org.springframework.stereotype.Service;
 
@@ -22,8 +20,14 @@ public class TravelOfficeServiceImp implements TravelOfficeService {
     }
 
     @Override
-    public boolean removeCustomer(String name) {
-        return false;
+    public boolean removeCustomer(Customer customer) {
+        try{
+            travelOffice.removeCustomer(customer);
+            return true;
+        }catch (NoSuchCustomerException e){
+            e.getMessage();
+            return false;
+        }
     }
 
     ///////////////////////////////////////////////// TRIP METHODS //////////////////////////////////////////////////
@@ -40,6 +44,25 @@ public class TravelOfficeServiceImp implements TravelOfficeService {
 
     @Override
     public boolean removeTrip(String description) {
-        return false;
+        try{
+            travelOffice.removeTrip(description);
+            return true;
+        }catch (NoSuchTripException e){
+            e.getMessage();
+            return false;
+        }
+    }
+
+    ////////////////////////////////////////////////// OTHER METHODS ///////////////////////////////////////////////////
+
+    @Override
+    public boolean assignTrip(Customer customer, String trip) {
+        try{
+            travelOffice.assignTrip(customer, trip);
+            return true;
+        }catch (NoSuchCustomerException e){
+            e.getMessage();
+            return false;
+        }
     }
 }

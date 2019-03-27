@@ -9,15 +9,23 @@ public interface TravelOfficeService {
 
     TravelOffice travelOffice = new TravelOffice();
 
-    String showAllCustomers();
+    ///////////////////////////////////////////////// CUSTOMER METHODS /////////////////////////////////////////////////
 
     boolean addCustomer(Customer customer);
 
-    boolean removeCustomer(String name);
+    boolean removeCustomer(Customer customer);
 
-    String showAllTrips();
+    String showAllCustomers();
+
+    ////////////////////////////////////////////////// TRIPS METHODS ///////////////////////////////////////////////////
 
     void addTrip(String description, Trip trip);
 
     boolean removeTrip(String description);
+
+    String showAllTrips();
+
+    ////////////////////////////////////////////////// OTHER METHODS ///////////////////////////////////////////////////
+
+    boolean assignTrip(Customer customer, String trip);
 }

@@ -60,17 +60,17 @@ public class Address {
 
     /////////////////////////////////////////////////// CONSTRUCTORS ///////////////////////////////////////////////////
 
-    /**
-     * Method constructs object Address.
-     * @param street of address.
-     * @param zip of address.
-     * @param city of address.
-     */
-    public Address(String street, String zip, String city) {
-        this.street = street;
-        this.zip = zip;
-        this.city = city;
-    }
+//    /**
+//     * Method constructs object Address.
+//     * @param street of address.
+//     * @param zip of address.
+//     * @param city of address.
+//     */
+//    public Address(String street, String zip, String city) {
+//        this.street = street;
+//        this.zip = zip;
+//        this.city = city;
+//    }
 
     ///////////////////////////////////////////////////// METHODS /////////////////////////////////////////////////////
 

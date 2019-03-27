@@ -10,9 +10,9 @@ public class AbroadTrip extends Trip {
      * Method calculated the price of trip with insurance.
      * @return price of trip with insurance.
      */
-    @Override
+    //@Override
     public int getPrice(){
-        return super.getPrice() + this.insurance;
+        return super.price + this.insurance;
     }
 
     /**
@@ -34,15 +34,15 @@ public class AbroadTrip extends Trip {
     }
 
     /////////////////////////////////////////////////// CONSTRUCTORS ///////////////////////////////////////////////////
-
-    /**
-     * Method constructs object AbroadTrip.
-     * @param start date of abroad trip.
-     * @param end date of abroad trip.
-     * @param destination of abroad trip.
-     * @param price of abroad trip.
-     */
-    public AbroadTrip(LocalDate start, LocalDate end, String destination, int price) {
-        super(start, end, destination, price);
-    }
+//
+//    /**
+//     * Method constructs object AbroadTrip.
+//     * @param start date of abroad trip.
+//     * @param end date of abroad trip.
+//     * @param destination of abroad trip.
+//     * @param price of abroad trip.
+//     */
+//    public AbroadTrip(LocalDate start, LocalDate end, String destination, int price) {
+//        super(start, end, destination, price);
+//    }
 }
