@@ -8,8 +8,8 @@ import java.util.Set;
 
 public class TravelOffice {
 
-    private Set<Customer> customersSet;
-    private Map<String, Trip> tripsMap;
+    private Set<Customer> customersSet = new HashSet<>();
+    private Map<String, Trip> tripsMap = new HashMap<>();
 
     ///////////////////////////////////////////////////// GETTERS /////////////////////////////////////////////////////
 
@@ -91,12 +91,10 @@ public class TravelOffice {
      */
     public void removeCustomer(Customer customer) throws NoSuchCustomerException{
 
-        getCustomersSet().remove(customer);
-
         boolean flag = false;
 
         for(Customer c : customersSet){
-            if(c.equals(customer)){
+            if(c.getName().equals(customer.getName())){
                 customersSet.remove(c);
                 flag = true;
             }
@@ -171,6 +169,14 @@ public class TravelOffice {
      */
     public void removeTrip(String description) throws NoSuchTripException{
 
+        Trip trip = findTripByDescription(description);
+
+        customersSet.forEach(c -> {
+            if(c.getTrip().equals(trip)){
+                c.setTrip(null);
+            }
+        });
+
         if(tripsMap.containsKey(description)){
             tripsMap.remove(description);
         }else{
@@ -204,8 +210,8 @@ public class TravelOffice {
      */
     public boolean assignTrip(Customer customer, String tripDescription) throws NoSuchCustomerException{
 
-       getCustomersSet().stream().forEach(c -> {
-           if(c.equals(customer)){
+       getCustomersSet().forEach(c -> {
+           if(c.getName().equals(customer.getName())){
                c.setTrip(getTripsMap().get(tripDescription));
            }
        });

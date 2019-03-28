@@ -30,7 +30,7 @@ public class TravelOfficeControler {
         return travelOfficeService.addCustomer(customer);
     }
 
-    @GetMapping("/removeCustomer")
+    @PostMapping("/removeCustomer")
     public boolean removeCustomer(Customer customer){
         return travelOfficeService.removeCustomer(customer);
     }
@@ -53,8 +53,8 @@ public class TravelOfficeControler {
     }
 
     @PostMapping("/removeTrip")
-    public void removeTrip(String description){
-        travelOfficeService.removeTrip(description);
+    public boolean removeTrip(String description){
+        return travelOfficeService.removeTrip(description);
     }
 
     @GetMapping("/showTrips")
@@ -62,7 +62,7 @@ public class TravelOfficeControler {
 
     ////////////////////////////////////////////////// OTHER METHODS //////////////////////////////////////////////////
 
-    @GetMapping("/assignTrip")
+    @PostMapping("/assignTrip")
     public void assignTrip(Customer customer, String tripDescription){
         travelOfficeService.assignTrip(customer, tripDescription);
     }
